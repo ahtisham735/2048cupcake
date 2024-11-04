@@ -14,6 +14,20 @@
   <meta name="MobileOptimized" content="320">
   <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0, maximum-scale=1, user-scalable=no, minimal-ui">
   <meta name="format-detection" content="telephone=no" />
+
+	(function() {
+    // Check if a canonical link tag already exists
+    if (!document.querySelector("link[rel='canonical']")) {
+        // Create a new link element
+        const canonicalLink = document.createElement("link");
+        canonicalLink.rel = "canonical";
+        canonicalLink.href = window.location.href;
+
+        // Append the canonical link to the head
+        document.head.appendChild(canonicalLink);
+    }
+})();
+
 </head>
 <body>
   <div class="container">
